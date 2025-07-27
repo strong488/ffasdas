@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.4;
+}
+
+a {
+  color: #005a2b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: #005a2b;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2px;
+  user-select: none;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  font-weight: 600;
+  user-select: none;
+}
+
+nav ul li a {
+  color: white;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto 40px;
+  padding: 0 15px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.2);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  object-fit: contain;
+  height: 150px;
+  background: #f0f0f0;
+}
+
+.product-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 18px;
+  min-height: 48px;
+  color: #005a2b;
+}
+
+.product-price {
+  color: #005a2b;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: auto;
+}
+
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  user-select: none;
+}
+
+.product-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+}
+
+.product-detail-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.product-detail-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #005a2b;
+}
+
+.product-detail-price {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #d9534f;
+}
+
+.product-detail-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

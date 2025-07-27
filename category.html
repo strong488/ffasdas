@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Категорія товарів - БудМаркет</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">БудМаркет</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="category.html?cat=tools">Інструменти</a></li>
+        <li><a href="category.html?cat=materials">Матеріали</a></li>
+        <li><a href="category.html?cat=garden">Сад і город</a></li>
+        <li><a href="category.html?cat=lighting">Освітлення</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="category-title">Категорія</h1>
+    <section id="product-list" class="products-grid">
+      <!-- Товари категорії -->
+    </section>
+  </main>
+
+  <footer>
+    © 2025 БудМаркет — Контакти: info@budmarket.ua | Телефон: +38 (044) 123-45-67
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Визначаємо категорію з URL
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat') || 'all';
+    document.getElementById('category-title').textContent = 'Категорія: ' + cat.charAt(0).toUpperCase() + cat.slice(1);
+    window.currentCategory = cat;  // для скрипта
+  </script>
+</body>
+</html>
