@@ -163,3 +163,9 @@ footer {
     gap: 10px;
   }
 }
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
